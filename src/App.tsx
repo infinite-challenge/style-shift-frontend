@@ -67,7 +67,11 @@ function ImageContainer(props: {width: number, height: number}) {
 
     if (file) {
       e.target.value = '';
-      if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
+    
+      const type = file.type.split('/')[1];
+      const allowedTypes = ['jpeg', 'jpg', 'png', 'gif', 'svg+xml', 'svg', 'bmp', 'webp'];
+    
+      if (!allowedTypes.includes(type)) {
         alert('Please upload a valid image file');
         return;
       }
