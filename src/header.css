@@ -1,0 +1,243 @@
+/* Depth 2, Frame 0 */
+.header {
+    box-sizing: border-box;
+}
+
+/* Auto layout */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 12px 40px; */
+    /* width: 1280px;
+    height: 65px; */
+    /* px to rem */
+    padding: 1.2% 3.1%;
+    width: 100%;
+    height: 6.5%;
+    border-bottom: 0.1rem solid #E6E8EB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+/* Depth 3, Frame 0 */
+/* Auto layout */
+.header-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 0px; */
+    padding: 0;
+    /* gap: 32px; */
+    gap: 15.1%;
+    /* width: 170.33px;
+    height: 22.5px; */
+    width: 13.3%;
+    height: 34.6%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.header-title-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Vector - 0 */
+.header-title-icon-svg {
+    width: 1.0rem;
+    height: 120%;
+}
+
+/* Depth 5, Frame 1 */
+/* Auto layout */
+.header-title-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    /* width: 138.33px; */
+    /* height: 22.5px; */
+    width: auto;
+    padding: 0;
+    height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    justify-content: center;
+}
+
+/* Depth 6, Frame 0 */
+
+/* Auto layout */
+.header-title-text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px;
+    width: 138.33px;
+    height: 22.5px; */
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* AI Style Transfer */
+.header-title-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    /* font-size: 18px; */
+    /* letter-spacing: -0.27px; */
+    font-size: 1.0rem;
+    letter-spacing: -0.020rem;
+    color: #1C1C21;
+}
+
+/* Inside auto layout */
+.header-title-text-layout {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Depth 3, Frame 1 */
+
+/* Auto layout */
+.header-function-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* padding: 0px; */
+    padding: 0;
+    /* gap: 32px; */
+    gap: 5.0%;
+    /* width: 1029.67px; */
+    /* height: 40px; */
+    width: 80.5%;
+    height: 61.5%;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Depth 4, Frame 0 */
+
+/* Auto layout */
+.header-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 0px; */
+    padding: 0;
+    /* gap: 36px; */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    flex: none;
+    flex-grow: 0;
+}
+
+.font-style {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 14px; */
+    font-size: 0.9rem;
+    color: #1C1C21;
+}
+
+.item {
+    /* height: 21px; */
+    white-space: nowrap;
+}
+
+/* Depth 4, Frame 1 */
+
+/* Auto layout */
+.header-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+    /* width: 40px; */
+    /* height: 40px; */
+    width: 4.924%;
+    height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Depth 5, Frame 0 */
+
+/* Auto layout */
+.header-button-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    padding: 0.625rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #EDF0F2;
+    /* border-radius: 12px; */
+    border-radius: 30%;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Depth 6, Frame 0 */
+
+/* Auto layout */
+.header-button-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+
+    /* width: 20px;
+    height: 20px; */
+    width: 1.25rem;
+    height: 1.25rem;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Depth 7, Frame 0 */
+.header-button-icon-svg {
+    /* width: 20px;
+    height: 20px; */
+    width: 1.25rem;
+    height: 1.25rem;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
