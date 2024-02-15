@@ -1,0 +1,263 @@
+/* Depth 2, Frame 1 */
+
+/* Auto layout */
+.inside-layout-0 {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.inside-layout-1 {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.main-body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 160px; */
+    padding: 0 12.4%;
+    /* width: 1280px; */
+    /* height: 928px; */
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+/* Depth 3, Frame 0 */
+
+/* Auto layout */
+.main-body-component {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+
+    /* width: 960px; */
+    /* height: 888px; */
+    width: 100%;
+    height: 95.7%;
+}
+
+
+/* Depth 4, Frame 0 */
+.main-body-title-container {
+    /* width: 960px; */
+    width: 100%;
+    margin-bottom: 2%;
+    /* height: 12%; */
+    /* padding: 10%; */
+}
+
+/* Depth 5, Frame 0 */
+
+/* Auto layout */
+.main-body-title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+    gap: 12px;
+    /* width: 288px; */
+    /* height: 81px; */
+
+    margin: 2% 2% 0;
+}
+
+
+/* Depth 6, Frame 0 */
+
+/* Auto layout */
+.main-body-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+    /* width: 288px; */
+}
+
+.main-body-title-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    /* identical to box height, or 125% */
+    letter-spacing: -1.188px;
+
+    color: #1C1C21;
+}
+
+
+/* Depth 6, Frame 1 */
+
+/* Auto layout */
+.main-body-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    height: 24px;
+
+    align-self: stretch;
+}
+
+.main-body-subtitle-layout {
+    height: 24px;
+}
+
+.main-body-subtitle-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #3D404A;
+}
+
+/* Depth 4, Frame 1 */
+
+/* Auto layout */
+.style-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2% 2% 0;
+
+    /* width: 960px; */
+    width: 100%;
+    height: 46.5px;
+    height: 4.5%;
+}
+
+
+/* Depth 5, Frame 0 */
+
+/* Auto layout */
+.style-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    /* height: 22.5px; */
+    align-self: stretch;
+}
+
+.style-title-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.27px;
+
+    color: #1C1C21;
+}
+
+/* Depth 4, Frame 4 */
+.user-image-container {
+    /* width: 960px; */
+    /* height: 554px; */
+    width: 100%;
+    
+    padding: 2%;
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+
+/* Depth 5, Frame 0 */
+
+/* Auto layout */
+.user-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+
+    width: 100%;
+
+    border-radius: 12px;
+}
+
+.user-image {
+    border-radius: 12px;
+}
+
+.style-button {
+    /* fixed middle button */
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    background-color: #617AFA;
+}
+
+:hover.style-button {
+    background-color: #4F63E6;
+}
+
+.style-button-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+    letter-spacing: -0.27px;
+
+    color: #FAFAFA;
+}
+
+.dashed-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 2px dashed #3B3D54;
+    border-radius: 12px;
+    gap: 30px;
+}
+
+.dashed-box-text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+    letter-spacing: -0.27px;
+}
+
+.dashed-box-btn {
+    background-color: #EDF0F2;
+    border-radius: 12px;
+    padding: 10px 20px;
+    
+    width: 150px;
+    height: 40px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.21px;
+    color: #1C1C21;
+}

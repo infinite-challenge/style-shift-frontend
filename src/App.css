@@ -1,0 +1,17 @@
+
+/* Depth 0, Frame 0 */
+
+/* Auto layout */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0px; */
+    padding: 0;
+    background: #FAFAFA;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    flex: 1;
+    background-size: cover;
+}
