@@ -13,6 +13,18 @@ export default function Main(props: { width: number, height: number}) {
         }
     );
 
+    const styleList = [
+        'aaa',
+        'bbb',
+        'ccc',
+        'realism',
+        'realism',
+        'realism',
+        'realism',
+        'realism',
+        'realismaaa',
+    ]
+
     const fileRef = React.createRef<HTMLInputElement>();
     const imageRef = React.useRef<HTMLImageElement>(null);
 
@@ -74,7 +86,20 @@ export default function Main(props: { width: number, height: number}) {
                     </div>
                 </div>
 
-                <div className="style-container inside-layout-0">
+                <div className="style-list inside-layout-1">
+                    {
+                        styleList.map((style, index) => {
+                            return (
+                                <div key={index} className='style-item inside-layout-0 dark:bg-[#26293B]'>
+                                    <div className="style-item-layout">
+                                        <span className="style-text dark:text-[#FFFFFF]">
+                                            {style}
+                                        </span>
+                                    </div>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
 
                 <div  className="style-title-container inside-layout-1">
@@ -118,4 +143,3 @@ export default function Main(props: { width: number, height: number}) {
         </div>
     );
 }
-
