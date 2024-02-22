@@ -13,6 +13,12 @@
     flex-grow: 0;
 }
 
+.inside-layout-2 {
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+
 .main-body-container {
     display: flex;
     flex-direction: row;
@@ -68,7 +74,6 @@
 
     margin: 2% 2% 0;
 }
-
 
 /* Depth 6, Frame 0 */
 
@@ -193,12 +198,22 @@
     border-radius: 12px;
 }
 
+.style-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
 .style-button {
     /* fixed middle button */
     position: fixed;
     bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%); 
+    left: max(50%, 250px);
+    transform: translateX(-50%);
+    z-index: 10;
     width: 200px;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -260,16 +275,69 @@
     color: #1C1C21;
 }
 
+.style-list-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 2%;
+}
+
 .style-list {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 2%;
     gap: 12px;
-
+    padding: 2% 0;
     width: 100%;
-
+    overflow: hidden;
     overflow-x: scroll;
+}
+
+.style-list-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow-x: scroll;
+}
+
+.style-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    margin: 0;
+    margin-right: 12px;
+
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.style-select {
+    border-radius: 6px;
+    border-width: 2.5px;
+}
+
+.style-image {
+    border-radius: 5px;
+    min-width: 105px;
+    width: 105px;
+    height: 100px;
+
+    object-fit: cover;
+
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -webkit-user-drag: none;
+
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .style-item {
@@ -281,14 +349,12 @@
     gap: 8px;
 
     height: 32px;
-
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-
-    background: #EDF0F2;
     border-radius: 12px;
+
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .style-item-layout {
@@ -305,6 +371,4 @@
     font-size: 14px;
     line-height: 21px;
     align-self: stretch;
-
-    color: #000000;
 }

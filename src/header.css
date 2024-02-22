@@ -27,6 +27,8 @@
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
+
+    min-height: 80px;
 }
 /* Depth 3, Frame 0 */
 /* Auto layout */
@@ -99,7 +101,6 @@
     font-weight: 700;
     /* font-size: 18px; */
     /* letter-spacing: -0.27px; */
-    font-size: 1.0rem;
     letter-spacing: -0.020rem;
     color: #1C1C21;
 }

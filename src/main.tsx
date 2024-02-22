@@ -1,7 +1,6 @@
 import React from 'react';
 import './main.css';
-
-import test from './Assets/test.svg';
+import { API, StyleTag, StyleImage } from './api';
 
 export default function Main(props: { width: number, height: number}) {
 
@@ -12,18 +11,25 @@ export default function Main(props: { width: number, height: number}) {
             url: ""
         }
     );
+    const [styleTagList, setStyleTagList] = React.useState([] as StyleTag[]);
+    const [styleImageList, setStyleImageList] = React.useState([] as StyleImage[]);
+    const [styleTag, setStyleTag] = React.useState(-1);
+    const [style, setStyle] = React.useState(-1);
 
-    const styleList = [
-        'aaa',
-        'bbb',
-        'ccc',
-        'realism',
-        'realism',
-        'realism',
-        'realism',
-        'realism',
-        'realismaaa',
-    ]
+    const styleList = {
+        "normal": "dark:text-[#FFFFFF] text-[#000000] dark:hover:bg-[#FAFAFA] bg-[#EDF0F2] hover:bg-[#3B3D54] dark:bg-[#26293B] dark:hover:text-[#000000] hover:text-[#FFFFFF]",
+        "clicked": "dark:text-[#000000] text-[#FFFFFF] dark:bg-[#FAFAFA] bg-[#3B3D54] hover:opacity-90"
+    }
+
+    const getStyleTagList = async () => {
+        const styleTags = await API.getStyleTags();
+        setStyleTagList(styleTags);
+    }
+
+    const getStyleImageList = async (styleTagId: number) => {
+        const styleImages = await API.getStyleImagesByTagId(styleTagId);
+        setStyleImageList(styleImages);
+    }
 
     const fileRef = React.createRef<HTMLInputElement>();
     const imageRef = React.useRef<HTMLImageElement>(null);
@@ -58,6 +64,31 @@ export default function Main(props: { width: number, height: number}) {
         }
     }
 
+    const handleStyleTagClick = (index: number) => {
+        
+        if (styleTag === index) {
+            setStyleTag(-1);
+            return;
+        }
+
+        getStyleImageList(index);
+        setStyleTag(index);
+    }
+
+    const handleStyleClick = (index: number) => {
+
+        if (style === index) {
+            setStyle(-1);
+            return;
+        }
+
+        setStyle(index);
+    }
+
+    React.useEffect(() => {
+        getStyleTagList();
+    }, []);
+
     return (
         <div className="main-body-container inside-layout">
             <div style={{maxWidth: 1500}} className="main-body-component inside-layout">
@@ -85,23 +116,49 @@ export default function Main(props: { width: number, height: number}) {
                         </span>
                     </div>
                 </div>
-
-                <div className="style-list inside-layout-1">
-                    {
-                        styleList.map((style, index) => {
-                            return (
-                                <div key={index} className='style-item inside-layout-0 dark:bg-[#26293B]'>
-                                    <div className="style-item-layout">
-                                        <span className="style-text dark:text-[#FFFFFF]">
-                                            {style}
-                                        </span>
+                <div className="style-list-container inside-layout-1">
+                    <div className="style-list inside-layout-1">
+                        {
+                            styleTagList.map((tagObject, index) => {
+                                return (
+                                    <div key={tagObject.id} className={`style-item inside-layout-0 cursor-pointer duration-0 
+                                        ${styleTag === tagObject.id ? styleList["clicked"] : styleList["normal"]}
+                                        `}
+                                        onClick={() => handleStyleTagClick(tagObject.id)}    
+                                    >
+                                        <div className="style-item-layout duration-0">
+                                            <div className="style-text duration-0">
+                                                {tagObject.tag}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })
-                    }
+                                );
+                            })
+                        }
+                        
+                    </div>
                 </div>
-
+                <div className={`${styleTag !== -1 && styleImageList.length > 0 ? "style-list-container inside-layout-1" : ""}`} style={{paddingTop: 0}}>
+                    {
+                            (styleTag !== -1 && styleImageList.length > 0) &&
+                            <div className="style-list inside-layout-1">
+                                <div className="style-list-layout" style={{width: Math.max(windowWidth, 500) * 0.72192 }}>
+                                {
+                                    styleImageList.map((imageObject, index) => {
+                                        return (
+                                            <div key={imageObject.id} className={`style-image-container style-text style-select ${imageObject.id === style ? "border-[#3B3D54] dark:border-[#FFFFFF]" : "border-transparent"} hover:opacity-70 text-[#000000] dark:text-[#FFFFFF] cursor-pointer duration-0 `}
+                                                onClick={() => handleStyleClick(imageObject.id)}
+                                            >
+                                                <img src={imageObject.imageUrl} className='style-image' />
+                                                {imageObject.title}
+                                            </div>
+                                        );
+                                    })
+                                }
+                                </div>
+                            </div>
+                        }
+                </div>
                 <div  className="style-title-container inside-layout-1">
                     <div className="style-title inside-layout-0">
                         <span className="style-title-text inside-layout-0 dark:text-[#FFFFFF]">
@@ -125,7 +182,8 @@ export default function Main(props: { width: number, height: number}) {
                                 <div className="dashed-box-text dark:text-[#FFFFFF]">
                                     Click to upload
                                 </div>
-                                <button className="dashed-box-btn dark:bg-[#26293B] dark:text-[#FFFFFF]" onClick={handleImageClick}>
+                                <button className={"dashed-box-btn cursor-pointer " + styleList.normal}
+                                onClick={handleImageClick}>
                                     Upload Image
                                 </button>
                             </div>
@@ -133,12 +191,13 @@ export default function Main(props: { width: number, height: number}) {
                         <input type="file" ref={fileRef} onChange={handleImageChange} style={{display: "none"}} />
                     </div>
                 </div>
-
-                <button className="style-button inside-layout-0">
-                    <span className="style-button-text inside-layout-0">
-                        Start
-                    </span>
-                </button>
+                <div className="style-button-container inside-layout-2">
+                    <button className="style-button inside-layout-0">
+                        <span className="style-button-text inside-layout-0">
+                            Start
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     );

@@ -14,5 +14,10 @@
     flex-grow: 0;
     flex: 1;
     background-size: cover;
-    min-width: 300px;
+    min-width: 500px;
+    overflow: scroll;
+}
+
+.scroll-style {
+    overflow: scroll;
 }
