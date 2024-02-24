@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/style-shift-frontend/static/css/main.420ce2e4.css",
+    "main.css": "/style-shift-frontend/static/css/main.14e7829b.css",
     "main.js": "/style-shift-frontend/static/js/main.e48573be.js",
     "static/js/787.9172212f.chunk.js": "/style-shift-frontend/static/js/787.9172212f.chunk.js",
     "static/media/SpaceGrotesk-Light.ttf": "/style-shift-frontend/static/media/SpaceGrotesk-Light.ba15429f9efcccc2826a.ttf",
@@ -10,12 +10,12 @@
     "static/media/SpaceGrotesk-Bold.ttf": "/style-shift-frontend/static/media/SpaceGrotesk-Bold.9ee2fc15497f7869312f.ttf",
     "index.html": "/style-shift-frontend/index.html",
     "static/media/logo.svg": "/style-shift-frontend/static/media/logo.408c9c6fb28ea51fd0c2774127b840b6.svg",
-    "main.420ce2e4.css.map": "/style-shift-frontend/static/css/main.420ce2e4.css.map",
+    "main.14e7829b.css.map": "/style-shift-frontend/static/css/main.14e7829b.css.map",
     "main.e48573be.js.map": "/style-shift-frontend/static/js/main.e48573be.js.map",
     "787.9172212f.chunk.js.map": "/style-shift-frontend/static/js/787.9172212f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.420ce2e4.css",
+    "static/css/main.14e7829b.css",
     "static/js/main.e48573be.js"
   ]
 }
